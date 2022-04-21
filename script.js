@@ -1,12 +1,17 @@
 const shuffleQuote = () => {
-  fetch('https://www.nagekar.com/quotes.txt')
-    .then(res => res.text())
-    .then(quotes => {
+  fetch('https://www.nagekar.com//wp-json/wp/v2/pages/1240')
+    .then(res => res.json())
+    .then(doc => {
       let quoteElem = document.querySelector('#quote');
-      let quoteArr = quotes.split('\n');
-      let index = Math.round(Math.random() * quoteArr.length);
-      quoteElem.innerHTML = quoteArr[index];
-    });
+      const html_content = doc.content.rendered;
+      const div = document.createElement('div')
+      div.innerHTML = html_content;
+      const quoteList = div.querySelector('ol');
+      const quoteCount = quoteList.children.length;
+      const randomnumber = Math.floor(Math.random() * (quoteCount + 1));
+      const randomQuote = quoteList[randomNumber].innerText;
+      quoteElem.innerHTML = randomQuote;
+    })
 }
 
 const tick = () => {
