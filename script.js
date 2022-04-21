@@ -8,7 +8,7 @@ const shuffleQuote = () => {
       div.innerHTML = html_content;
       const quoteList = div.querySelector('ol');
       const quoteCount = quoteList.children.length;
-      const randomnumber = Math.floor(Math.random() * (quoteCount + 1));
+      const randomNumber = Math.floor(Math.random() * (quoteCount + 1));
       const randomQuote = quoteList[randomNumber].innerText;
       quoteElem.innerHTML = randomQuote;
     })
