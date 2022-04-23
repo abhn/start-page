@@ -3,26 +3,26 @@
 }
 html, body {
   height: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 body {
-  background: black;
+  background: #242424;
   min-height: 100vh;
   color: #eee;
 }
 main {
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  max-width: 90%;
-  height: 100%;
+  max-width: 800px;
   margin: 0 auto;
+  padding-top: 200px;
 }
 time {
-  margin: 1.25rem 0;
+  margin: 1.5rem 0;
 }
 blockquote {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   margin: 1.25rem 0;
 }
