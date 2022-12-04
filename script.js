@@ -32,7 +32,7 @@ const shuffleQuote = () => {
     selectQuote();
   }
   else {
-    fetch('https://www.nagekar.com//wp-json/wp/v2/pages/1240')
+    fetch('https://nagekar.com//wp-json/wp/v2/pages/1240')
       .then(res => res.json())
       .then(doc => {
         const htmlContent = doc.content.rendered;
